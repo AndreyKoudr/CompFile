@@ -27,7 +27,7 @@ Usual headache with third-party software.
   So, if you wish to have just a simple class to contain multiple files in it, 
 you can use this class.
 
-  Compoiste file structure
+  Composite file structure
   ------------------------
   
   Composite file is a set of files appended to each other and preceded
