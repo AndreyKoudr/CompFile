@@ -1,0 +1,245 @@
+<HTML>
+<HEAD>
+  <TITLE>MI Simulators. Green-screen generic radar simulator</TITLE>
+  <META http-equiv=Content-Type content="text/html; charset=windows-1252">
+  <META http-equiv=Pragma content=no-cache>
+  <META http-equiv=Content-Language content=en-uk>
+  <link rel="stylesheet" href="../../../css/equipment.css">
+</HEAD>
+
+<BODY>
+
+<TABLE>
+	<TR class="white">
+		<td style="width: 100px; align: center; vertical-align: middle;">
+			<a href="../../onlineradar.html" onclick="if (window != window.parent) 
+					return false;
+				else 
+					return true;"
+			target=_top title="To radar simulator controls"><IMG SRC="../../../bitmaps/logototop.png" alt="Click to go to radar simulator controls"></a>
+		</td>
+		<td style="vertical-align: middle;">
+			<H1>Green-screen generic radar</H1>
+		</td>
+	</TR>
+</TABLE>
+
+<TABLE>
+
+  <TR>
+    <TD WIDTH=33% ALIGN=LEFT VALIGN=TOP COLSPAN=2>
+      <IMG SRC="radar03.png">
+    </TD>
+    <TD WIDTH=34% ALIGN=LEFT VALIGN=TOP>Features :
+      <DIR>
+        <LI>green-screen generic computer-based deepwater radar</LI>
+        <LI>very simple in use</LI>
+        <LI>real 3D terrains for exercises</LI>
+        <LI>sliders for brilliance, gain, tune, sea, rain , FTC</LI>
+        <LI>heading mode</LI>
+        <LI>show/hide ship heading line</LI>
+        <LI>range from 0.5 to 128 NM with range rings</LI>
+        <LI>EBL/VRM</LI>
+        <LI>echo stretch</LI>
+        <LI>one guard zone</LI>
+        <LI>ARPA</LI>
+	    <LI>range of indicators</LI>
+      </DIR>
+    </TD>
+  </TR>
+
+  <TR>
+    <TD WIDTH=33% ALIGN=LEFT VALIGN=TOP COLSPAN=3>
+      The radar simulates a computer-based radar controlled by a computer mouse (trackball). All functions are implemented by mouse clicks on
+      corresponding buttons on the display. Current radar modes are designated by indicators located at the top of display, like "RANGE", "HEAD UP" or TARGET EXP".<BR>
+      To implement a function which requires specification of a position on PPI, like to acquire a target (i.e. mark the target), 
+      use the two steps : (1) mouse-click at this position to move PPI cursor (green cross) to this place (2) click the corresponding function button on the right-hand panel.<BR>
+      The BRILLIANCE, GAIN, TUNE and other sliders are used to specify a corresponding value : move mouse cursor over the slider and
+      drag the left mouse button over the slider to change the value.
+    </TD>
+  </TR>
+
+  <TR>
+    <TD WIDTH=33% ALIGN=LEFT VALIGN=TOP>
+      <B>Function</B>
+    </TD>
+    <TD WIDTH=34% ALIGN=LEFT VALIGN=TOP COLSPAN=2>
+      <B>How to implement</B>
+    </TD>
+  </TR>
+
+  <TR>
+    <TD WIDTH=33% ALIGN=LEFT VALIGN=TOP>
+      heading mode
+    </TD>
+    <TD WIDTH=34% ALIGN=LEFT VALIGN=TOP COLSPAN=2>
+      click [HEAD UP] or [NORTH UP]
+    </TD>
+  </TR>
+
+  <TR>
+    <TD WIDTH=33% ALIGN=LEFT VALIGN=TOP>
+      changing range
+    </TD>
+    <TD WIDTH=34% ALIGN=LEFT VALIGN=TOP COLSPAN=2>
+      use [RANGE+] and [RANGE-] buttons. Current range value is displayed at an upper line of the screen
+    </TD>
+  </TR>
+
+  <TR>
+    <TD WIDTH=33% ALIGN=LEFT VALIGN=TOP>
+      range rings
+    </TD>
+    <TD WIDTH=34% ALIGN=LEFT VALIGN=TOP COLSPAN=2>
+      use [RINGS ON/OFF] to hide/show
+    </TD>
+  </TR>
+
+  <TR>
+    <TD WIDTH=33% ALIGN=LEFT VALIGN=TOP>
+      heading line (hide temporarily)
+    </TD>
+    <TD WIDTH=34% ALIGN=LEFT VALIGN=TOP COLSPAN=2>
+      click [HIDE SHM]; the line stays hidden while the button is pressed
+    </TD>
+  </TR>
+
+  <TR>
+    <TD WIDTH=33% ALIGN=LEFT VALIGN=TOP>
+      target expansion (echo stretch)
+    </TD>
+    <TD WIDTH=34% ALIGN=LEFT VALIGN=TOP COLSPAN=2>
+      is used to enlarge radar echoes from point objects; press [EXPANSION] to turn this function on/off
+    </TD>
+  </TR>
+
+  <TR>
+    <TD WIDTH=33% ALIGN=LEFT VALIGN=TOP>
+      VRM/EBL
+    </TD>
+    <TD WIDTH=34% ALIGN=LEFT VALIGN=TOP COLSPAN=2>
+      press VRM/EBL [SHOW/CHANGE] button; an electronic bearing line
+      and variable range marker appears; a small circle marks a node moveable by the mouse;
+      drag it with the left mouse button pressed to provide
+      the marker with a desirable range and bearing; press [SHOW/CHANGE] again to complete.<BR>
+      Click [HIDE] to hide the marker
+    </TD>
+  </TR>
+
+  <TR>
+    <TD WIDTH=33% ALIGN=LEFT VALIGN=TOP>
+      guard zones (alarm not yet working)
+    </TD>
+    <TD WIDTH=34% ALIGN=LEFT VALIGN=TOP COLSPAN=2>
+      are sectored zones around the ship used to issue alarms when a 
+      target comes in or out; press GUARD ZONE [SHOW/CHANGE] button; a guard zone appears; drag a small circle 
+      at the upper right corner of the zone with the left mouse button pressed to provide
+      the zone with a desirable shape; press [SHOW/CHANGE] to complete.<BR>
+      Click [HIDE] to hide the guard zone
+    </TD>
+  </TR>
+
+  <TR>
+    <TD WIDTH=33% ALIGN=LEFT VALIGN=TOP>
+      ARPA - Automatic Radar Plotting Aid 
+    </TD>
+    <TD WIDTH=34% ALIGN=LEFT VALIGN=TOP COLSPAN=2>
+      is used to predict positions of targets and estimate risk of 
+      collision by calculating CPA (Closest Point of Approach) - 
+      minimum distance to a target and TCPA (time to this moment) provided
+      the target and own ship will move with the same constant speeds
+      and headings.<BR> 
+	  Place PPI cursor over a target and then press ARPA [ACQUIRE TARGET]
+      to harness a target. Safe targets are marked by circles, dangerous targets are marked by triangles.
+	  Speed vector length equals to the distance the marked ship will cover in 3 minutes.<BR>
+      Select a target to display its numerical parameters by placing the PPI
+      cursor over an acquired target and click [SELECT TARGET] button. The parameters of the selected target are shown at lower lines of the display.<BR>
+      Exclude a target from monitoring by placing the PPI cursor over the target and click [CANCEL TARGET]. Clear all by 
+      [CANCEL ALL].
+    </TD>
+  </TR>
+
+  <TR>
+    <TD WIDTH=33% ALIGN=LEFT VALIGN=TOP>
+      display current own ship position, speed and course
+    </TD>
+    <TD WIDTH=34% ALIGN=LEFT VALIGN=TOP COLSPAN=2>
+      this information is provided by a GPS connected to the radar. This information is
+      displayed at the upper left corner of the display
+    </TD>
+  </TR>
+
+  <TR>
+    <TD WIDTH=33% ALIGN=LEFT VALIGN=TOP>
+      brilliance
+    </TD>
+    <TD WIDTH=34% ALIGN=LEFT VALIGN=TOP COLSPAN=2>
+      place mouse cursor over the BRILLIANCE slide bar, click and hold the left mouse button, drag the cursor left-right to 
+      specify a desired value
+    </TD>
+  </TR>
+
+  <TR>
+    <TD WIDTH=33% ALIGN=LEFT VALIGN=TOP>
+      gain adjustment
+    </TD>
+    <TD WIDTH=34% ALIGN=LEFT VALIGN=TOP COLSPAN=2>
+      place mouse cursor over the GAIN slide bar, click and hold the left mouse button, drag the cursor left-right to 
+      specify a desired value
+    </TD>
+  </TR>
+
+  <TR>
+    <TD WIDTH=33% ALIGN=LEFT VALIGN=TOP>
+      tuning the magnetron
+    </TD>
+    <TD WIDTH=34% ALIGN=LEFT VALIGN=TOP COLSPAN=2>
+      place mouse cursor over the TUNE slide bar, click and hold the left mouse button, drag the cursor left-right to 
+      specify a desired value
+    </TD>
+  </TR>
+
+  <TR>
+    <TD WIDTH=33% ALIGN=LEFT VALIGN=TOP>
+      suppress sea clutter
+    </TD>
+    <TD WIDTH=34% ALIGN=LEFT VALIGN=TOP COLSPAN=2>
+      place mouse cursor over the SEA slide bar, click and hold the left mouse button, drag the cursor left-right to 
+      specify a desired value of suppression
+    </TD>
+  </TR>
+
+  <TR>
+    <TD WIDTH=33% ALIGN=LEFT VALIGN=TOP>
+      suppress rain clutter
+    </TD>
+    <TD WIDTH=34% ALIGN=LEFT VALIGN=TOP COLSPAN=2>
+      place mouse cursor over the RAIN slide bar, click and hold the left mouse button, drag the cursor left-right to 
+      specify a desired value of suppression
+    </TD>
+  </TR>
+
+  <TR>
+    <TD WIDTH=33% ALIGN=LEFT VALIGN=TOP>
+      change FTC (fast time constant)
+    </TD>
+    <TD WIDTH=34% ALIGN=LEFT VALIGN=TOP COLSPAN=2>
+      is used to suppress rain clutter far from the ship; place mouse cursor over the FTC slide bar, 
+      click and hold the left mouse button, drag the cursor left-right to 
+      specify a desired value of suppression
+    </TD>
+  </TR>
+  
+	<tr>
+		<td colspan="3">
+			<div class="footer">
+				Copyright 2017 MI Simulators
+			</div>
+		</td>
+	</tr>
+
+</TABLE>
+
+
+</BODY>
+</HTML>
