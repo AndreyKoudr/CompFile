@@ -17,7 +17,7 @@ what makes the whole project not functional
 
   That is why it looks reasonable to place groups of files into a single file with
 programmatic access to every entry in this composite file. I wrote marine simulators
-before and it was very good to collect data about every ship model (geeometry, textures for OpenGL,
+before and it was very good to collect data about every ship model (geometry, textures for OpenGL,
 radar reflection curves, ship dynamics data) into a file.
 
   Of course, you can install and use HDF5. It is fine, but you will have
