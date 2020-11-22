@@ -78,5 +78,5 @@ where RADAR_FILES is file header; RADAR.CMP is an existing composite file.
   This example opens a composite file, extracts all its entries and saves 
 each in a separate file.
 
-  <B>The essense</B> of the example is in how to read composite file 
-entry data into memory (see the code).
+  <B>The purpose</B> of the example is in how to read composite file 
+entry data into memory (see the code). It does nothing useful. Maybe only check if all data is stored correctly.
