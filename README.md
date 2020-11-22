@@ -25,7 +25,7 @@ to update it with every new version of it and new version of compiler you use.
 Usual headache with third-party software.
 
   So, if you wish to have just a simple class to contain multiple files in it, 
-you can use this class.
+you can use this.
 
   Composite file structure
   ------------------------
@@ -61,7 +61,7 @@ directory (see my efforts in getFileList()).
   ------------------------------------------------------
 with a header from all files specified by file mask like this :
 
->CompFiles RADAR_FILES TestFiles/*.* RADAR.CMP
+    >CompFiles RADAR_FILES TestFiles/*.* RADAR.CMP
 
   It takes all files from TestFiles folder, compiles them all into a
 composite file RADAR.CMP and saves it with header RADAR_FILES.
@@ -69,10 +69,9 @@ composite file RADAR.CMP and saves it with header RADAR_FILES.
   Test console project CompFileTest
   ---------------------------------
 
-this second console project shows how to extract entries from a composite file
+this second console project shows how to extract entries from a composite file e.g.
 
-e.g.
-  > CompFileTest RADAR_FILES RADAR.CMP
+    > CompFileTest RADAR_FILES RADAR.CMP
 
 where RADAR_FILES is file header; RADAR.CMP is an existing composite file.
 
