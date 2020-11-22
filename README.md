@@ -35,8 +35,8 @@ by header according to the following format :
 
   - header specified - header string (without length byte); this header is 
 checked on opening
-  - total number of files (entries) compiled in the files (2 bytes);
-  - directory, containing position + length pairs (each 4 + 4 bytes) for every entry;
+  - total number of files (entries) compiled in the files (2 bytes)
+  - directory, containing position + length pairs (each 4 + 4 bytes) for every entry
   - files one by one.
 
   A composite file can be generated with the <B>CompFiles</B> program. This is one
@@ -78,5 +78,5 @@ where RADAR_FILES is file header; RADAR.CMP is an existing composite file.
   This example opens a composite file, extracts all its entries and saves 
 each in a separate file.
 
-  <B>The purpose</B> of the example is in how to read composite file 
+  <B>The purpose</B> of the example is to show how to read composite file 
 entry data into memory (see the code). It does nothing useful. Maybe only check if all data is stored correctly.
